@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+
+    <% if (message.error) { %>
+    <p class="text-red-600"><%- message.error %></p>
+    <% } %>
+
+
+    <% if (message.success) { %> 
+        <p class="text-green-700"><%- messages.success %></p>
+    <% } %>
+
+
+    <div>
+        <form action="/active-orders" method="post">
+            <div class="form-group">
+                <label for="order_num">Order Number</label>
+                <input type="text" name="order_num" class="form-control" id="order_num" value="<%= order_num %>">
+            </div>
+
+            <div class="form-group">
+                <label for="menu_item">Menu Item</label>
+                <input type="text" name="menu_item" class="form-control" id="menu_item" value="">
+            </div>
+
+            <input type="submit" class="bg-green-500" value="login">
+        </form>
+    </div>
+
+
+
+    
+</body>
+</html>
